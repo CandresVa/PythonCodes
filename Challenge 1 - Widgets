@@ -1,0 +1,28 @@
+#WIDGET
+from IPython.display import display # Permite visualizar un widget
+import ipywidgets as ipw
+from ipywidgets import interact,widgets
+#GRAFICAS Y FUNCIONES
+import matplotlib.pyplot as plt
+import numpy as np
+
+a = widgets.Select(options=['Colisión inminente', 'Determinar si colisionan'],description='Pregunta 1',disabled=False)
+display(a)
+
+b=widgets.IntSlider(min=0, max=10, step=2, orientation='vertical', description= "Nivel de riesgo")
+display(b)
+
+ipw.Button(description="Holii",tooltip="describe mientras estoy encima")
+
+ipw.Checkbox(value=False,description=('1'),indent=False)
+
+ipw.IntText(value=5)
+
+ipw.VBox(box_style="danger")
+
+import ipywidgets as widgets
+title_widget = widgets.HTML('<em>Horizontal Box Example</em> hok')
+slider = widgets.IntSlider(min=0, max=100, step=1, orientation='horizontal', description= "Risk level")
+ipw.VBox([title_widget, slider],box_style="info")
+
+ipw.HTML('<em>Horizontal Box Example</em>, by Carlos Valencia')
